@@ -13,28 +13,11 @@ namespace lab11
             {
                 Console.WriteLine("введите шестизначное число: ");
                 number = Console.ReadLine();
-
-                
             }
 
-            Console.WriteLine(number);
+            bool isLucky = LuckyNumber.IsLuckyNumber(number);
 
-            int sum1 = 0;
-            int sum2 = 0;
-
-            for (int i = 0; i < 3; i++) {
-                sum1 += int.Parse(number[i].ToString());
-            }
-
-            for (int i = 3; i < 6; i++)
-            {
-                sum2 += int.Parse(number[i].ToString());
-            }
-
-            Console.WriteLine(sum1);
-            Console.WriteLine(sum2);
-
-            if (sum1 == sum2)
+            if (isLucky == true)
             {
                 Console.WriteLine("число " + number + " cчастливое");
             }
@@ -42,7 +25,7 @@ namespace lab11
             {
                 Console.WriteLine("число " + number + " НЕ cчастливое");
             }
-            
+
         }
     }
 }
